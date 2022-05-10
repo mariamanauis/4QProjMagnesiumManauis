@@ -84,7 +84,7 @@
                 let contactInfoString = localStorage.getItem(keyContactInfo);
                 let contactInfoObj = JSON.parse(contactInfoString);
 
-                result_name.innerHTML = contactInfoObj.name;
+                result_name.innerHTML = contactInfoObj.fullname;
                 result_email.innerHTML = contactInfoObj.email;
                 result_phone.innerHTML = contactInfoObj.phoneNumber;
                 result_deli.innerHTML = contactInfoObj.deliMode;
