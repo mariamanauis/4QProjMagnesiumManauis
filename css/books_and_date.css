@@ -27,7 +27,7 @@ div.radio_content {
     border: 1px solid black;
     border-radius: 2px;
     height: 320px;
-    width: 260px;
+    width: 250px;
     float: left;
     margin: 0 20%;
 }
@@ -57,10 +57,10 @@ div#date_range > p {
     padding: 15px;
 }
 div#date_inputs label {
-    font-size: 30px;
+    font-size: 24px;
     align-items: center;
 	justify-content: space-between;
-	padding: 0 5%;
+	padding: 0 2%;
 }
 
 div#checkAvailable, div#toNext {
@@ -69,8 +69,8 @@ div#checkAvailable, div#toNext {
     
 }
 div#checkAvailable > button, div#toNext > input {
-    font-size: 30px;
-    padding: 10px;
+    font-size: 20px;
+    padding: 5px;
     margin: 10px;
     border-radius: 15px;
     align-items: center;
