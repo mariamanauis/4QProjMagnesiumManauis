@@ -27,9 +27,9 @@ div.radio_content {
     border: 1px solid black;
     border-radius: 2px;
     height: 320px;
-    width: 250px;
+    width: 240px;
     float: left;
-    margin: 0 20%;
+    margin: 0 10%;
 }
 div.radio_content > img {
     width: 180px;
