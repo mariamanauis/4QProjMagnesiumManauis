@@ -42,18 +42,6 @@ prev.addEventListener("click", function() {
 
 //storing the form inputs to local storage
 
-//check the number of form reservations made
-//check if there are submitted inputs that were saved
-let contactInfo = localStorage.getItem("contactInfo");
-
-if (contactInfo) {
-    contactInfo = parseInt(contactInfo) + 1;
-}
-else {
-    contactInfo = "1";
-    localStorage.setItem("contactInfo", contactInfo);
-}
-
 let reserveForm = document.forms[0];
 
 //acts as the handler onsubmit. will save the data in local storage then proceed to the next page
@@ -79,6 +67,17 @@ reserveForm.addEventListener("reset", function(event) {
 
 //reads all entered inputs from the form and places them in contactInfoData
 function saveContactInfo() {
+    //check the number of form reservations made
+    //check if there are submitted inputs that were saved
+    let contactInfo = localStorage.getItem("contactInfo");
+
+    if (contactInfo) {
+        contactInfo = parseInt(contactInfo) + 1;
+    }
+    else {
+        contactInfo = "1";
+        localStorage.setItem("contactInfo", contactInfo);
+    }
     //determine which mode of delivery the user selected
     let modeofDelivery = document.getElementsByName('mode_delivery');
     let deliveryMode = modeofDelivery[0].value;
