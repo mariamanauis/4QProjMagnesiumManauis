@@ -24,7 +24,7 @@ function checkDate() {
     var endDate = new Date(givenEndDate);
 
     if (startDate > currentDate) {
-        if (startDate > endDate) {
+        if (startDate < endDate) {
             if ((endDate.getDate() - startDate.getDate()) <= 7) {
                 alert("The book you have requested is available. You can now click Submit Entries to proceed.")
             }
