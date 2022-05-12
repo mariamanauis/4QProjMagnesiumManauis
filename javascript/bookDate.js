@@ -15,7 +15,6 @@ function blurBorder(formEle) {
 }
 
 //date validation. function to see if someone already reserved the book at an overlapping date will be added on the final project :)
-
 function checkDate() {
     var currentDate = new Date();
     var givenStartDate = document.getElementById("start_date").value;
