@@ -3,6 +3,7 @@ body {
 }
 section {
     font-family: 'PT Sans', Arial, Helvetica, sans-serifr;
+    padding-bottom: 10px;
 }
 section > h2 {
     font-size: 30px;
