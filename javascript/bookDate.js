@@ -24,11 +24,17 @@ function checkDate() {
     var endDate = new Date(givenEndDate);
 
     if (startDate > currentDate) {
-        if ((endDate.getDate() - startDate.getDate()) <= 7) {
-            alert("The book you have requested is available. You can now click Submit Entries to proceed.")
+        if (startDate > endDate) {
+            if ((endDate.getDate() - startDate.getDate()) <= 7) {
+                alert("The book you have requested is available. You can now click Submit Entries to proceed.")
+            }
+            else {
+                alert("Borrowing periods have a maximum of seven days. Please enter another ending date.");
+                document.getElementById("end_date").value = "";
+            }
         }
         else {
-            alert("Borrowing periods have a maximum of seven days. Please enter another ending date.");
+            alert("Please ensure that your ending date is later than your starting date.");
             document.getElementById("end_date").value = "";
         }
     }
@@ -58,7 +64,7 @@ let bookDate = document.forms[0];
 bookDate.addEventListener("submit", function(event) {
     event.preventDefault();
     if (confirm('Proceed to Reservation Form?')) {
-        //stores the entries to the local storage, see line 78 for the actual function
+        //stores the entries to the local storage, see line 85 for the actual function
         saveBookDate();
         //submits the form and opens the reserve.html
         bookDate.submit();
